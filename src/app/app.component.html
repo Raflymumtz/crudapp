@@ -1,8 +1,11 @@
 <mat-toolbar color="primary">
-  <span>Crud Application</span>
+  <span>Halaman Admin</span>
   <span class="example-spacer"></span>
   <button mat-raised-button (click)="openAddEditEmpForm()">
-    ADD EMPLOYEE
+    Tambah Mahasiswa
+  </button>
+  <button mat-raised-button>
+    Log Out
   </button>
 </mat-toolbar>
 
@@ -40,34 +43,29 @@
         <td mat-cell *matCellDef="let row"> {{row.email}}</td>
       </ng-container>
 
-      <ng-container matColumnDef="dob">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> dob </th>
-        <td mat-cell *matCellDef="let row"> {{row.dob | date}}</td>
+      <ng-container matColumnDef="tanggallahir">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Tanggal Lahir </th>
+        <td mat-cell *matCellDef="let row"> {{row.tanggallahir | date}}</td>
       </ng-container>
 
-      <ng-container matColumnDef="gender">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> gender </th>
-        <td mat-cell *matCellDef="let row"> {{row.gender}}</td>
+      <ng-container matColumnDef="jeniskelamin">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Jenis Kelamin </th>
+        <td mat-cell *matCellDef="let row"> {{row.jeniskelamin}}</td>
       </ng-container>
 
-      <ng-container matColumnDef="education">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Education </th>
-        <td mat-cell *matCellDef="let row"> {{row.education}}</td>
+      <ng-container matColumnDef="pendidikanterakhir">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Pendidikan Terakhir </th>
+        <td mat-cell *matCellDef="let row"> {{row.pendidikanterakhir}}</td>
       </ng-container>
 
-      <ng-container matColumnDef="company">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Company </th>
-        <td mat-cell *matCellDef="let row"> {{row.company}}</td>
+      <ng-container matColumnDef="alamat">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Alamat </th>
+        <td mat-cell *matCellDef="let row"> {{row.alamat}}</td>
       </ng-container>
 
-      <ng-container matColumnDef="experience">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Exp. </th>
-        <td mat-cell *matCellDef="let row"> {{row.experience}}</td>
-      </ng-container>
-
-      <ng-container matColumnDef="package">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Package </th>
-        <td mat-cell *matCellDef="let row"> {{row.package | currency:'INR'}}L</td>
+      <ng-container matColumnDef="nohp">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> No HP </th>
+        <td mat-cell *matCellDef="let row"> {{row.nohp}}</td>
       </ng-container>
 
       <ng-container matColumnDef="action">

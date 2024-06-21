@@ -13,11 +13,11 @@ export class EmpAddEditComponent implements OnInit {
   empForm: FormGroup;
 
   education: string[] = [
-    'Matric',
-    'Diploma',
-    'Intermediate',
-    'Graduate',
-    'Post Graduate',
+    'SMA',
+    'MA',
+    'S1',
+    'S2',
+    'S3',
   ];
 
   constructor(
@@ -31,10 +31,11 @@ export class EmpAddEditComponent implements OnInit {
       firstName: '',
       lastName: '',
       email: '',
-      dob: '',
-      gender: '',
-      education: '',
-      company: '',
+      tanggallahir: '',
+      jeniskelamin: '',
+      pendidikanterakhir: '',
+      alamat: '',
+      nohp: '',
       experience: '',
       package: '',
     });
@@ -51,7 +52,7 @@ export class EmpAddEditComponent implements OnInit {
           .updateEmployee(this.data.id, this.empForm.value)
           .subscribe({
             next: (val: any) => {
-              this._coreService.openSnackBar('Employee detail updated!');
+              this._coreService.openSnackBar('Detail Mahasiswa Terupdate!');
               this._dialogRef.close(true);
             },
             error: (err: any) => {
@@ -61,7 +62,7 @@ export class EmpAddEditComponent implements OnInit {
       } else {
         this._empService.addEmployee(this.empForm.value).subscribe({
           next: (val: any) => {
-            this._coreService.openSnackBar('Employee added successfully');
+            this._coreService.openSnackBar('Mahasiswa Baru Sukses Ditambahkan!');
             this._dialogRef.close(true);
           },
           error: (err: any) => {

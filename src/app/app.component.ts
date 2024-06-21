@@ -18,12 +18,11 @@ export class AppComponent implements OnInit {
     'firstName',
     'lastName',
     'email',
-    'dob',
-    'gender',
-    'education',
-    'company',
-    'experience',
-    'package',
+    'tanggallahir',
+    'jeniskelamin',
+    'pendidikanterakhir',
+    'alamat',
+    'nohp',
     'action',
   ];
   dataSource!: MatTableDataSource<any>;
